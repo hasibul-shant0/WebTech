@@ -1,0 +1,37 @@
+body {
+    font-family: Arial, sans-serif;
+        text-align: center;
+
+}
+.product-display {
+    text-align: center;
+}
+.product-box {
+    display: inline-block;
+    width: 220px;
+    padding: 16px;
+    margin: 12px;
+    border: 2px solid #2b84d77f;
+    background-color: #f0ecec;
+    border-radius: 12px;
+   
+}
+
+
+.product-box h2 {
+    font-size: 1.2em;
+    margin: 8px 0;
+}
+
+.product-box a {
+    display: inline-block;
+    margin-top: 8px;
+    color: #fff;
+    background: #4a90e2;
+    padding: 6px 16px;
+    font-weight: bold;
+}
+.product-box :hover {
+    background: #6ca3d4;
+
+}
