@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Event Registration</title>
+    <link rel="stylesheet" href="ex.css">
+</head>
+<body>
+
+<h2>Global Tech Connect (Registration Form)</h2>
+
+<form id="regForm">
+    <label>Full Name *</label><br>
+    <input type="text" id="name">
+    <div class="error" id="nameErr"></div>
+
+    <label>Professional Email *</label><br>
+    <input type="text" id="email">
+    <div class="error" id="emailErr"></div>
+
+    <label>Company/Institution (Optional)</label><br>
+    <input type="text" id="company"><br>
+
+    <label>Attendance Type *</label><br>
+    <input type="radio" name="attend" value="Virtual"> Virtual <br>
+    <input type="radio" name="attend" value="In-Person"> In-Person
+    <div class="error" id="attendErr"></div>
+
+    <button type="button" onclick="register()">Register</button>
+</form>
+
+<br>
+
+<button id="toggleBtn" onclick="toggleStats()">Show Event Analytics</button>
+
+<div id="statsPanel">
+    <h3>Event Analytics</h3>
+    <p>Total Registrants: <span id="totalReg">0</span></p>
+    <p>Virtual: <span id="virtualCnt">0</span></p>
+    <p>In-Person: <span id="inCnt">0</span></p>
+</div>
+
+<script>
+    let registrations = [];
+    let virtualCount = 0;
+    let inPersonCount = 0;
+
+    function register() {
+        let name = document.getElementById("name");
+        let email = document.getElementById("email");
+        let company = document.getElementById("company");
+        let attend = document.querySelector("input[name='attend']:checked");
+        
+        document.getElementById("nameErr").innerText = "";
+        document.getElementById("emailErr").innerText = "";
+        document.getElementById("attendErr").innerText = "";
+
+         let valid = true;
+
+        if (name.length < 6 || name.length > 100) {
+            document.getElementById("nameErr").innerText =
+                "Name must be between 6 and 100 characters";
+            valid = false;
+        }
+
+        if(!email.includes("@") || !email.includes(".")) {
+            document.getElementById("emailErr").innerText =
+                "Please enter a valid professional email address";
+            valid = false;
+        }
+
+        if(!attend) {
+            document.getElementById("attendErr").innerText =
+                "Please select your attendance type";
+            valid = false;
+        }
+       
+
+        if(valid) {
+            registrations.push({name, email, company, attend: attend.value});
+            if(attend.value === "Virtual") virtualCount++;
+            else if(attend.value === "In-Person") inPersonCount++;
+        
+            alert("Registration Successful!");
+            document.getElementById("regForm").reset();
+        }
+        updateStats();
+    
+    }
+
+    function updateStats(){
+        document.getElementById("totalReg").innerText = registrations.length;
+        document.getElementById("virtualCnt").innerText = virtualCount;
+        document.getElementById("inCnt").innerText = inPersonCount;
+    }
+
+     function toggleStats() {
+        let panel = document.getElementById("statsPanel");
+        let btn = document.getElementById("toggleBtn");
+
+        if (panel.style.display === "none") {
+            panel.style.display = "block";
+            btn.innerText = "Hide Event Analytics";
+        } else {
+            panel.style.display = "none";
+            btn.innerText = "Show event Analysis";
+        }
+    }
+</script>
+
+</body>
+</html>
+
+    
