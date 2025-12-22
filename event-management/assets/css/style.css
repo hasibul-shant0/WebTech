@@ -1,0 +1,7 @@
+/* Basic styling for course demo */
+body { font-family: Arial, sans-serif; margin: 20px; }
+header { display:flex; justify-content:space-between; align-items:center; }
+#eventsList { display:flex; flex-wrap:wrap; gap:12px; }
+.event-card { border:1px solid #ccc; padding:12px; width:280px; border-radius:6px; }
+.event-title { font-weight:bold; }
+button { cursor:pointer; padding:6px 10px; }
