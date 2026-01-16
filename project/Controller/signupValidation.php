@@ -10,13 +10,24 @@ error_reporting(E_ALL);
 ini_set("display_error", 1);
 
 session_start();
+$username = "";
 $email = "";
 $pass = "";
+$role = "";
 
+$username = $_POST["username"];
 $email = $_POST["email"];
 $pass = $_POST["password"];
-echo "Email - $email";
-echo "password - $pass";
+$role = $_POST["role"];
+
+
+if($role == "user"){Header("Location: ..\View\dashboard.php");}
+else{echo "Email - $email";
+}
+
+
+//echo "Email - $email";
+// echo "password - $pass";
 
 
 $errors = [];
@@ -55,7 +66,7 @@ if(count($errors) > 0){
     //Validation Success
     $db = new DatabaseConnection();
     $connection = $db->openConnection();
-    $result = $db->signup($connection, "users", $email, $pass, "");
+    $result = $db->signup($connection, "registration", $username, $email, $pass, $role);
 
     if($result){
         Header("\webtech\project\View\login.php");

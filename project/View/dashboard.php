@@ -16,7 +16,8 @@
 }
 .product-box {
     display: inline-block;
-    width: 220px;
+    width: 300px;
+    height: 360px;
     padding: 16px;
     margin: 12px;
     border: 2px solid #2b84d77f;
@@ -25,6 +26,13 @@
    
 }
 
+.product-box h3 {
+    font-size: 1em;
+    font-weight: bold;
+    color: goldenrod;
+    text-align: left;
+
+}
 
 .product-box h2 {
     font-size: 1.2em;
@@ -48,96 +56,108 @@
 
 
 <body>
-    <h1>Products</h1>
+    <h1>Packages</h1>
     <div class="product-display">
-        <h2>Laptop</h2>
+        <h2>Wedding</h2>
         <div class="product-box">
-            <img src="/Users/shanto/Downloads/laptop.jpeg" width="220" height="150" alt="Laptop">
+            
+            <img src="/webtech/project/project_pic/package-wedding.jpg" width="310" height="200" alt="Wedding picture">
+            <h3>Wedding Exclusive</h3>
             <p>Lightweight, powerful laptop for daily use.</p>
-            <p>$800</p>
-            <a href=" ">Buy Now</a>
+            <p>$200</p>
+            <a href="webtech/project/Controller/bookEvent.php?event=Wedding Exclusive">
+                Book Now
+            </a>
+
         </div>
         <div class="product-box">
-            <img src="/Users/shanto/Downloads/m2.jpeg" width="220" height="150" alt="laptop">
             
-            <p>Wireless headphones with noise cancellation.</p>
-            <p>$900</p>
-            <a href=" ">Buy Now</a>
+            <img src="/webtech/project/project_pic/signin.avif" width="310" height="200" alt="Wedding picture">
+            <h3>Wedding Signature</h3>
+            <p>Lightweight, powerful laptop for daily use.</p>
+            <p>$300</p>
+            <a href="../Controller/bookEvent.php?event=Wedding Signature">
+                Book Now
+            </a>
+        </div>
+       <div class="product-box">
+            
+            <img src="/webtech/project/project_pic/wedding.jpg" width="310" height="200" alt="Wedding picture">
+            <h3>Wedding Premium</h3>
+            <p>Lightweight, powerful laptop for daily use.</p>
+            <p>$400</p>
+            <a href="../Controller/bookEvent.php?event=Wedding Premium">
+                Book Now
+            </a>
+        </div>
+
+
+        <h2>Birthday</h2>
+          <div class="product-box">
+            
+            <img src="/webtech/project/project_pic/package-birthday.jpg" width="310" height="200" alt="Birthday picture">
+            <h3>Birthday Exclusive</h3>
+            <p>Lightweight, powerful laptop for daily use.</p>
+            <p>$200</p>
+            <a href="../Controller/bookEvent.php?event=Birthday Exclusive">
+                Book Now
+            </a>
+        </div>
+       <div class="product-box">
+            
+            <img src="/webtech/project/project_pic/package-party.jpg" width="310" height="200" alt="Birthday picture">
+            <h3>Birthday Signature</h3>
+            <p>Lightweight, powerful laptop for daily use.</p>
+            <p>$300</p>
+            <a href="../Controller/bookEvent.php?event=Birthday Signature">
+                Book Now
+            </a>
         </div>
         <div class="product-box">
-            <img src="/Users/shanto/Downloads/m4.jpeg" width="220" height="150" alt="laptop">
             
-            <p>Track fitness and stay connected on the go.</p>
-            <p>$1000</p>
-            <a href=" ">Buy Now</a>
+            <img src="/webtech/project/project_pic/birth.jpg" width="310" height="200" alt="Birthday picture">
+            <h3>Birthday Premium</h3>
+            <p>Lightweight, powerful laptop for daily use.</p>
+            <p>$400</p>
+            <a href="../Controller/bookEvent.php?event=Birthday Premium">
+                Book Now
+            </a>
+        </div>
+        
+
+
+        <h2>Conference</h2>
+          <div class="product-box">
+            
+            <img src="/webtech/project/project_pic/con3.webp" width="310" height="200" alt="Conference picture">
+            <h3>Conference Exclusive</h3>
+            <p>Lightweight, powerful laptop for daily use.</p>
+            <p>$200</p>
+            <a href="../Controller/bookEvent.php?event=Conference Exclusive">
+                Book Now
+            </a>
         </div>
          <div class="product-box">
-            <img src="/Users/shanto/Downloads/l4.jpeg" width="220" height="150" alt="laptop">
             
-            <p>Track fitness and stay connected on the go.</p>
-            <p>$1100</p>
-            <a href=" ">Buy Now</a>
-        </div>
-
-
-        <h2>Smart Watch</h2>
-        <div class="product-box">
-            <img src="/Users/shanto/Downloads/w1.jpeg" width="220" height="150" alt="smartwatch">
+            <img src="/webtech/project/project_pic/con1.jpeg" width="310" height="200" alt="Conference picture">
+            <h3>Conference Signature</h3>
             <p>Lightweight, powerful laptop for daily use.</p>
-            <p>$150</p>
-            <a href=" ">Buy Now</a>
+            <p>$300</p>
+            <a href="../Controller/bookEvent.php?event=Conference Signature">
+                Book Now
+            </a>
         </div>
         <div class="product-box">
-            <img src="/Users/shanto/Downloads/w2.jpeg" width="220" height="150" alt="Headphones">
             
-            <p>Wireless headphones with noise cancellation.</p>
-            <p>$180</p>
-            <a href=" ">Buy Now</a>
-        </div>
-        <div class="product-box">
-            <img src="/Users/shanto/Downloads/w3.jpeg" width="220" height="150"  alt="Smartwatch">
-            
-            <p>Track fitness and stay connected on the go.</p>
-            <p>$220</p>
-            <a href=" ">Buy Now</a>
-        </div>
-        <div class="product-box">
-            <img src="/Users/shanto/Downloads/w4.jpeg" width="220" height="150"  alt="Smartwatch">
-            
-            <p>Track fitness and stay connected on the go.</p>
-            <p>$200</p>
-            <a href=" ">Buy Now</a>
-        </div>
-
-
-        <h2>Headphone</h2>
-        <div class="product-box">
-            <img src="/Users/shanto/Downloads/h1.jpeg" width="220" height="150" alt="Laptop">
+            <img src="/webtech/project/project_pic/con2.jpg" width="310" height="200" alt="Seminar picture">
+            <h3>Conference Premium</h3>
             <p>Lightweight, powerful laptop for daily use.</p>
-            <p>$130</p>
-            <a href=" ">Buy Now</a>
+            <p>$400</p>
+            <a href="../Controller/bookEvent.php?event=Conference Premium">
+                Book Now
+            </a>
         </div>
-        <div class="product-box">
-            <img src="/Users/shanto/Downloads/h2.jpeg" width="220" height="150" alt="Headphones">
-            
-            <p>Wireless headphones with noise cancellation.</p>
-            <p>$200</p>
-            <a href="#">Buy Now</a>
-        </div>
-        <div class="product-box">
-            <img src="/Users/shanto/Downloads/h3.jpeg" width="220" height="150" alt="Smartwatch">
-            
-            <p>Track fitness and stay connected on the go.</p>
-            <p>$150</p>
-            <a href=" ">Buy Now</a>
-        </div>
-         <div class="product-box">
-            <img src="/Users/shanto/Downloads/h4.jpeg" width="220" height="150" alt="Smartwatch">
-            
-            <p>Track fitness and stay connected on the go.</p>
-            <p>$100</p>
-            <a href=" ">Buy Now</a>
-        </div>
+       
 
     </div>
      <footer>
