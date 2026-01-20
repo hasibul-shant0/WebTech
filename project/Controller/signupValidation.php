@@ -21,14 +21,8 @@ $pass = $_POST["password"];
 $role = $_POST["role"];
 
 
-if($role == "user"){Header("Location: ..\View\dashboard.php");}
-else{echo "Email - $email";
-}
-
-
-//echo "Email - $email";
-// echo "password - $pass";
-
+if($role == "user"){Header("Location: ..\View\userDashboard.php");}
+else if($role == "admin"){Header("Location: ..\View\adminDashboard.php");}
 
 $errors = [];
 $previousValues = [];
@@ -41,9 +35,9 @@ if(!$pass){
 if(count($errors) > 0){
     $_SESSION["errors"] = $errors;
     if(!$email){
-        $_SESSION["emailError"] = $errors["email"]; // store in session
+        $_SESSION["emailError"] = $errors["email"]; 
     }else{
-        unset($_SESSION["emailError"]); //remove from session
+        unset($_SESSION["emailError"]); 
     }
 
     if(!$pass){
@@ -63,16 +57,28 @@ if(count($errors) > 0){
     unset($_SESSION['previousValues']);
     unset($_SESSION["signupErr"]);
 
-    //Validation Success
+
     $db = new DatabaseConnection();
     $connection = $db->openConnection();
+
+    $check = $db->checkExistingUser($connection, "registration", $email);
+
+    if ($check->num_rows > 0) {
+        $_SESSION["signupErr"] = "Email already exists";
+        header("Location: ../View/signup.php");
+        exit();
+    }
+
     $result = $db->signup($connection, "registration", $username, $email, $pass, $role);
 
+
     if($result){
-        Header("\webtech\project\View\login.php");
+        if($role == "user"){Header("Location: ../View/userDashboard.php");}
+        else if($role == "admin"){Header("Location: ../View/adminDashboard.php");}
+        // Header("../View/login.php");
     }else{
         $_SESSION["signupErr"] = "Sign up failed..";
-        Header("\webtech\project\View\signup.php");
+        Header("../View/signup.php");
     }
 
     

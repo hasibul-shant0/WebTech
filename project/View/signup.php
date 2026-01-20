@@ -5,7 +5,9 @@ $isLoggedIn = false;
 $isLoggedIn = $_SESSION["isLoggedIn"] ?? false;
 
 if($isLoggedIn){
-    Header("Location: /webtech/project/View/dashboard.php");
+    if($role == "user"){Header("Location: ../View/userDashboard.php");}
+    else if($role == "admin"){Header("Location: ../View/adminDashboard.php");}
+    // Header("Location: /webtech/project/View/login.php");
 }
 
 
@@ -32,16 +34,22 @@ unset($_SESSION["signupErr"]);
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            height: 100vh;
+            height: 90vh;
         }
 
         form {
-            width: 400px;
-            margin: 100px auto;
+           width: 400px;
+            height: 360px;
+            margin: 50px auto;
             padding: 20px;
             background-color: rgba(255, 255, 255, 0.9);
             border-radius: 6px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h3{
+            text-align: center;
+            font-size: 24px;
         }
 
         table {
@@ -79,7 +87,11 @@ unset($_SESSION["signupErr"]);
 </head>
 
 <body>
-    <form method="post" action="..\Controller\signupValidation.php">
+    <!-- <form method="post" action="..\Controller\signupValidation.php"> -->
+        <form method="post" action="../Controller/signupValidation.php"
+      onsubmit="return validateSignup();">
+                            <h3>Sign Up</h3>
+
         <table>
             <tr>
                  <td>
@@ -124,5 +136,16 @@ unset($_SESSION["signupErr"]);
         </tr>
         </table>
     </form>
+
+    <script>
+function validateSignup() {
+    if (document.getElementById("emailStatus").value === "invalid") {
+        alert("Email already used. Please use a unique email.");
+        return false;
+    }
+    return true;
+}
+</script>
+
 </body>
 </html>

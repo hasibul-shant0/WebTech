@@ -10,7 +10,6 @@
             background-color: #f2f2f2;
         }
 
-        /* Header */
         .header {
             background-color: #2c3e50;
             padding: 15px;
@@ -34,11 +33,6 @@
             background-color: #3498db;
         }
 
-        /* .nav a:hover {
-            background-color: #2980b9;
-        } */
-
-        /* Main Section */
         .main {
             text-align: center;
             margin-top: 120px;
@@ -59,11 +53,6 @@
             font-size: 16px;
         }
 
-        .btn:hover {
-            background-color: #219150;
-        }
-
-        /* Footer */
         .footer {
             position: fixed;
             bottom: 0;
@@ -90,7 +79,7 @@
         <h1>Welcome to Our Event Management Platform</h1>
         <p>Plan, manage, and enjoy your events easily</p>
 
-        <a href="/webtech/project/View/dashboard.php" class="btn">View Packages</a>
+        <a href="/webtech/project/View/packages.php" class="btn">View Packages</a>
     </div>
 
     <div class="footer">

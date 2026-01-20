@@ -32,17 +32,21 @@ unset( $_SESSION["loginErr"]);
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            height: 100vh;
+            height: 90vh;
         }
 
         form {
-            width: 400px;
-            height: 200px;
-            margin: 100px auto;
+            width: 390px;
+            height: 270px;
+            margin: 50px auto;
             padding: 20px;
             background-color: rgba(255, 255, 255, 0.9);
             border-radius: 6px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h3{
+            text-align: center;
+            font-size: 24px;
         }
 
         table {
@@ -83,7 +87,10 @@ unset( $_SESSION["loginErr"]);
 
 
 <body>
+
     <form method="post" action="..\Controller\loginValidation.php">
+                    <h3>Login</h3>
+
         <table>
             <tr>
                 <td>

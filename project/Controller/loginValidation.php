@@ -26,19 +26,18 @@ if (!empty($errors)) {
     exit;
 }
 
-// DB validation
+
 else{
     // unset($_SESSION['errors']);
     // unset($_SESSION['previousValues']);
     // unset($_SESSION["loginErr"]);
 
-    //Validation Success
 $db = new DatabaseConnection();
     $connection = $db->openConnection();
     $result = $db->signin($connection, "registration", $email, $pass);
 
     if($result->num_rows > 0){
-            $row = $result->fetch_assoc();   // ✅ FETCH ROW
+            $row = $result->fetch_assoc(); 
             
         $_SESSION["isLoggedIn"] = true;
         $_SESSION["email"] = $email;
@@ -48,7 +47,8 @@ $db = new DatabaseConnection();
         setcookie("isLoggedIn", true, time() + 120,"/");
         setcookie("email", json_encode($email), time() + 120,"/");
 
-        if($_SESSION["role"] == "user"){Header("Location: ../View/dashboard.php");}
+        if($_SESSION["role"] == "user"){Header("Location: ../View/userDashboard.php");}
+        else if($_SESSION["role"] == "admin"){Header("Location: ../View/adminDashboard.php");}
         else{echo "Email - $email";}        
        
      

@@ -48,13 +48,11 @@
     font-weight: bold;
 }
 
-
 </style>
 
 
 <body>
     <h1>Packages</h1>
-    
     <div class="product-display">
         <h2>Wedding</h2>
         <div class="product-box">
@@ -64,7 +62,7 @@
             <p>A beautiful wedding setup with essential decoration and coordination.
                 Includes basic stage design, lighting, and guest management.</p>
             <p>$200</p>
-            <a href="webtech/project/Controller/bookEvent.php?event=Wedding Exclusive">
+            <a href="../View/login.php">
                 Book Now
             </a>
 
@@ -73,10 +71,10 @@
             
             <img src="/webtech/project/project_pic/signin.avif" width="310" height="200" alt="Wedding picture">
             <h3>Wedding Signature</h3>
-            <p>A stylish and well-organized wedding with enhanced décor elements.
+            <p>Designed for couples who want a personalized and memorable celebration.
                 Includes themed decoration, sound system, and event coordination.</p>
             <p>$300</p>
-            <a href="../Controller/bookEvent.php?event=Wedding Signature">
+            <a href="../View/login.php">
                 Book Now
             </a>
         </div>
@@ -84,10 +82,10 @@
             
             <img src="/webtech/project/project_pic/wedding.jpg" width="310" height="200" alt="Wedding picture">
             <h3>Wedding Premium</h3>
-            <p>Ideal for grand celebrations with attention to every small detail.
+            <p>A luxury wedding experience with high-end decoration and planning.
                 Includes premium décor, professional lighting, and full event management.</p>
             <p>$400</p>
-            <a href="../Controller/bookEvent.php?event=Wedding Premium">
+            <a href="../View/login.php">
                 Book Now
             </a>
         </div>
@@ -101,7 +99,7 @@
             <p>Suitable for simple parties with creative decoration and arrangements.
                 Includes basic theme décor, balloons, and music support.</p>
             <p>$200</p>
-            <a href="../Controller/bookEvent.php?event=Birthday Exclusive">
+            <a href="../View/login.php">
                 Book Now
             </a>
         </div>
@@ -109,10 +107,10 @@
             
             <img src="/webtech/project/project_pic/package-party.jpg" width="310" height="200" alt="Birthday picture">
             <h3>Birthday Signature</h3>
-            <p>Perfect for birthdays special and memorable for all ages.
-                Includes themed decoration,sound system,and activity coordination.</p>
+            <p>Perfect for making birthdays special and memorable for all ages.
+                Includes themed decoration, sound system, and activity coordination.</p>
             <p>$300</p>
-            <a href="../Controller/bookEvent.php?event=Birthday Signature">
+            <a href="../View/login.php">
                 Book Now
             </a>
         </div>
@@ -120,10 +118,10 @@
             
             <img src="/webtech/project/project_pic/birth.jpg" width="310" height="200" alt="Birthday picture">
             <h3>Birthday Premium</h3>
-            <p>A grand birthday celebration with premium decoration and entertainment.
+            <p>Best for special milestones and large guest gatherings.
                 Includes luxury décor, professional lighting, and complete event handling.</p>
             <p>$400</p>
-            <a href="../Controller/bookEvent.php?event=Birthday Premium">
+            <a href="../View/login.php">
                 Book Now
             </a>
         </div>
@@ -138,7 +136,7 @@
             <p>Ideal for meetings, seminars, and small corporate events.
                 Includes seating arrangement, projector setup, and sound support.</p>
             <p>$200</p>
-            <a href="../Controller/bookEvent.php?event=Conference Exclusive">
+            <a href="../View/login.php">
                 Book Now
             </a>
         </div>
@@ -149,7 +147,7 @@
             <p>Designed for corporate events, workshops, and formal gatherings.
                 Includes stage setup, branding support, and audio-visual equipment.</p>
             <p>$300</p>
-            <a href="../Controller/bookEvent.php?event=Conference Signature">
+            <a href="../View/login.php">
                 Book Now
             </a>
         </div>
@@ -157,10 +155,10 @@
             
             <img src="/webtech/project/project_pic/con2.jpg" width="310" height="200" alt="Seminar picture">
             <h3>Conference Premium</h3>
-            <p>A high-end conference experience with modern and elegant design.
+            <p>Best for large corporate events and important business meetings.
                 Includes premium seating, advanced AV systems, and full event coordination.</p>
             <p>$400</p>
-            <a href="../Controller/bookEvent.php?event=Conference Premium">
+            <a href="../View/login.php">
                 Book Now
             </a>
         </div>

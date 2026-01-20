@@ -1,18 +1,20 @@
-function findExistingEmail(){
+function findExistingEmail() {
     var Email = document.getElementById("email").value;
     var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
+
+    xhttp.onreadystatechange = function () {
         if (this.readyState == 4 && this.status == 200) {
-            document.getElementById("erroremail").innerHTML =this.responseText;
+            document.getElementById("erroremail").innerHTML = this.responseText;
+
+            if (this.responseText === "Use another email") {
+                document.getElementById("emailStatus").value = "invalid";
+            } else {
+                document.getElementById("emailStatus").value = "valid";
+            }
         }
-        else
-        {
-            document.getElementById("erroremail").innerHTML = this.status;
-        }
-        
-        
-        };
-    xhttp.open("POST", "webtech/project/Controller/checkEmail.php", true);
+    };
+
+    xhttp.open("POST", "../Controller/checkEmail.php", true);
     xhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-    xhttp.send("Email="+Email);
-    }
+    xhttp.send("Email=" + Email);
+}

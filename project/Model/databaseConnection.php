@@ -23,15 +23,6 @@ class DatabaseConnection{
         }
         return $result;
     }
-
-//     function signin($connection, $registration, $email){
-//     $sql = "SELECT * FROM ".$registration." WHERE email = ?";
-//     $stmt = $connection->prepare($sql);
-//     $stmt->bind_param("s", $email);
-//     $stmt->execute();
-//     return $stmt->get_result();
-// }
-
     
     function signin($connection, $registration, $email, $pass){
         $sql = "SELECT * FROM ".$registration." WHERE email='".$email."' AND password='".$pass."'";

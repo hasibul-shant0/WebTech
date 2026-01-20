@@ -1,28 +1,24 @@
 <?php
 include "../Model/DatabaseConnection.php";
-$Email="";
-$Email=$_POST["Email"];
 
-if($Email==""){
+$email = $_POST["email"];
+
+if ($email == "") {
     echo "Email Empty";
-}
-else{
+} 
+else {
+    $db = new DatabaseConnection();
+    $connection = $db->openConnection();
 
-    $connection=new DatabaseConnection();
-    $conobj=$connection->openConnection();
-    $result=$connection->checkExistingUser($conobj,"registration",$Email);
-    if ($result->num_rows > 0)
-    {
-       echo "Email Already Used";
+    $result = $db->checkExistingUser($connection, "registration", $email);
+
+    if ($result->num_rows > 0) {
+        echo "Use another email";
+    } else {
+        echo "Unique Email";
     }
 
-    else{
-            echo "Unique Email";
-    }
-    $connection->closeConnection($conobj);
+    $db->closeConnection($connection);
 }
-
-
-
 
 ?>
