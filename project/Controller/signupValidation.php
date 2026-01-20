@@ -71,11 +71,8 @@ if(count($errors) > 0){
 
     $result = $db->signup($connection, "registration", $username, $email, $pass, $role);
 
-
     if($result){
-        if($role == "user"){Header("Location: ../View/userDashboard.php");}
-        else if($role == "admin"){Header("Location: ../View/adminDashboard.php");}
-        // Header("../View/login.php");
+       Header("../View/login.php");
     }else{
         $_SESSION["signupErr"] = "Sign up failed..";
         Header("../View/signup.php");

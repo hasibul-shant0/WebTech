@@ -28,9 +28,9 @@ if (!empty($errors)) {
 
 
 else{
-    // unset($_SESSION['errors']);
-    // unset($_SESSION['previousValues']);
-    // unset($_SESSION["loginErr"]);
+    unset($_SESSION['errors']);
+    unset($_SESSION['previousValues']);
+    unset($_SESSION["loginErr"]);
 
 $db = new DatabaseConnection();
     $connection = $db->openConnection();

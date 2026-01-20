@@ -5,8 +5,8 @@ $isLoggedIn = false;
 $isLoggedIn = $_SESSION["isLoggedIn"] ?? false;
 
 if($isLoggedIn){
-    if($role == "user"){Header("Location: ../View/userDashboard.php");}
-    else if($role == "admin"){Header("Location: ../View/adminDashboard.php");}
+        if($_SESSION["role"] == "user"){Header("Location: ../View/userDashboard.php");}
+        else if($_SESSION["role"] == "admin"){Header("Location: ../View/adminDashboard.php");}
     // Header("Location: /webtech/project/View/login.php");
 }
 
@@ -87,7 +87,7 @@ unset($_SESSION["signupErr"]);
 </head>
 
 <body>
-    <!-- <form method="post" action="..\Controller\signupValidation.php"> -->
+
         <form method="post" action="../Controller/signupValidation.php"
       onsubmit="return validateSignup();">
                             <h3>Sign Up</h3>

@@ -5,7 +5,9 @@ $isLoggedIn = false;
 $isLoggedIn = $_SESSION["isLoggedIn"] ?? false;
 
 if($isLoggedIn){
-    Header("Location: /webtech/project/view/dashboard.php");
+    if($_SESSION["role"] == "user"){Header("Location: /webtech/project/view/userDashboard.php");}
+    else if($_SESSION["role"] == "admin"){Header("Location: /webtech/project/view/adminDashboard.php");}
+    // Header("Location: /webtech/project/view/userDashboard.php");
 }
 
 
